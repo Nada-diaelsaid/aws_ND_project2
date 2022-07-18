@@ -21,8 +21,9 @@ http://serve-webap-5al06b7h4fqk-2133313418.us-east-1.elb.amazonaws.com/
 
 ### Resources needed to be found in the aws console:
 - IAM policy with name Project2-S3ReadOnly, that has S3 read only access
-- jumpbox instance with public IP, ssh my IP access and key pair
+- jumpbox instance with public IP, ssh port 22 'my IP' access, and key pair
 - another key pair to access the instances with name: private-server-devops-key  
+- S3 bucket with the name: project2-nada-701818746723 and has an index.html file uploaded to it, enable static web hosting
 
 
 ### To run the project:
