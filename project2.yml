@@ -77,7 +77,7 @@ Resources:
           nano index.html
       # ubuntu 18.04 LTS     
       ImageId: !Ref myAMI
-      KeyName: private-server-devops-key
+      # KeyName: private-server-devops-key
       SecurityGroups:
       - Ref: WebServerSecurityGrp
       # 4 RAM, 2 vCPU
