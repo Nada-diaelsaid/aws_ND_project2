@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "Nada-Project2"
+    },
+    {
+        "ParameterKey": "myAMI",
+        "ParameterValue": "ami-0729e439b6769d6ab"
+    },
+    {
+        "ParameterKey": "http",
+        "ParameterValue": "http://"
+    } 
+]
