@@ -1,5 +1,9 @@
 # aws_ND_project2
 Deploy high availability web app using cloudformation
+Infrastructure diagram:
+![Alt text](Blank_diagram.jpeg?raw=true "Title")
+
+
 Resources used:
 https://aws.amazon.com/premiumsupport/knowledge-center/ec2-instance-access-s3-bucket/
 
