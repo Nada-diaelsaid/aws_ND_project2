@@ -22,7 +22,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run1:
+      - run:
           name: "Hello"
           command: "echo Hello, "
 
@@ -30,7 +30,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run1:
+      - run:
           name: "World"
           command: "echo world!"
 
@@ -40,6 +40,6 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - Hello
-      - World:
-        requires: [Hello]
+      - print_hello
+      - print_world:
+          requires: [print_hello]
