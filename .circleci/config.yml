@@ -32,8 +32,9 @@ jobs:
     steps:
       - run:
           name: "World"
-          command: "echo world!"
-          
+          command: |
+            echo $NADA_ENV
+
   print_env_var:
     docker:
       - image: cimg/base:2021.11
