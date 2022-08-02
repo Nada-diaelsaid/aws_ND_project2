@@ -32,8 +32,7 @@ jobs:
     steps:
       - run:
           name: "World"
-          command: |
-            echo $NADA_ENV
+          command: "echo World"
 
   print_env_var:
     docker:
@@ -41,8 +40,8 @@ jobs:
     steps:
       - run:
           name: "ENV_VAR"
-          command: "Hello $NADA_ENV"
-
+          command: |
+            echo $NADA_ENV
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
