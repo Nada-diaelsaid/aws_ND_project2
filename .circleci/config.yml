@@ -33,6 +33,14 @@ jobs:
       - run:
           name: "World"
           command: "echo world!"
+          
+  print_env_var:
+    docker:
+      - image: cimg/base:2021.11
+    steps:
+      - run:
+          name: "ENV_VAR"
+          command: "Hello $NADA_ENV"
 
 
 # Invoke jobs via workflows
@@ -43,3 +51,4 @@ workflows:
       - print_hello
       - print_world:
           requires: [print_hello]
+      - print_env_var
