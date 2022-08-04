@@ -74,8 +74,9 @@ workflows:
     jobs:
       # - print_hello
       # - print_world:
-      #     requires: [print_hello]
+      #      requires: [print_hello]
       # - print_env_var
       - save_hello_world_output
-      - print_output_file
+      - print_output_file:
+          requires: [save_hello_world_output]
 
