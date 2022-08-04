@@ -54,18 +54,19 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - output.*
+            - output.txt
 
   print_output_file:
     docker: 
       - image: cimg/base:2021.11
     steps:
+      - attach_workspace:
+          at: ./
       - run:
           name: "print_output"
           command: |
             cat output.txt
-      - attach_workspace:
-          at: ./
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
