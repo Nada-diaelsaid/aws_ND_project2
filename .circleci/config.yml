@@ -75,7 +75,7 @@ jobs:
           command: |
             cat output.txt
 
-  uisngCommands:
+  usingCommands:
     <<: *defaults
     steps:
       - print_pipeline_id
