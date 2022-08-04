@@ -5,7 +5,7 @@ defaults: &defaults
   docker: 
     - image: cimg/base:2021.11
 
-command:
+commands:
   print_pipeline_id:
     description: "Print circleci workflow id"
     steps:
@@ -76,7 +76,8 @@ jobs:
             cat output.txt
 
   usingCommands:
-    <<: *defaults
+    docker: 
+      - image: cimg/base:2021.11
     steps:
       - print_pipeline_id
 
