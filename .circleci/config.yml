@@ -80,6 +80,15 @@ jobs:
     steps:
       - print_pipeline_id
 
+  Fail_onPurpose:
+    docker: 
+      - image: circleci/node:13.8.0
+      - steps:
+        - run:
+            name: "fail On Purpose"
+            command:
+            when : on_fail
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -92,4 +101,4 @@ workflows:
       - save_hello_world_output
       - print_output_file:
           requires: [save_hello_world_output]
-      - usingCommands
+      - Fail_onPurpose
